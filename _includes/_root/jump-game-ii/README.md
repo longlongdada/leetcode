@@ -1,4 +1,0 @@
-
-## TODO 
-  * write down thinking
-

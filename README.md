@@ -1,18 +1,12 @@
-Leetcode
-========
-
-After 151 Done(Jul 20 2014)
---------------------------
+#Leetcode solutions
 
 [Github Page](http://leetcode.tgic.me/)
 
 Please [Donate leetcode](https://oj.leetcode.com/donate/)
 
-[Leetcode Downloader](https://github.com/tg123/leetcode_downloader)
-
-
-TODO
-----
- * Impove code readability
- * Write down thinkings how problems were solved
-
+## TODO
+ 
+ * Evaluate the Time and Space complexity of each solution
+ * Proof the code's correctness if needed
+ * Find better solutions
+ * Rewrite code with Java8 lambda

@@ -1,24 +1,21 @@
 public class Solution {
-    public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
+    public List<List<Integer>> threeSum(int[] num) {
         
         Arrays.sort(num);
         
-        ArrayList<ArrayList<Integer>> found = new ArrayList<ArrayList<Integer>>();
+        List<List<Integer>> found = new ArrayList<>();
         
         int pneg = 0 , ppos = num.length - 1;
         
-        
         while(ppos > 0 && num[ppos] >= 0){
-            while(pneg < ppos && num[pneg] <= 0 && num[ppos] >= 0){
-                int sum = num[pneg];
-                sum += num[ppos];
+            
+            while(pneg < ppos && num[pneg] <= 0){
                 
+                int sum = num[pneg] + num[ppos];
+
                 for(int i  = pneg + 1; i < ppos; i++){
                     if(num[i] + sum == 0){
-                        found.add(new ArrayList<Integer>(
-                            Arrays.asList(new Integer[]{num[pneg], num[i] ,num[ppos]})
-                        ));
+                        found.add(Arrays.asList(new Integer[]{num[pneg], num[i] ,num[ppos]}));
                         
                         break;
                     }
@@ -33,7 +30,6 @@ public class Solution {
             int old = num[ppos];
             while(ppos > 0 && num[ppos] == old) ppos--;
         }
-        
         
         return found;
     }
